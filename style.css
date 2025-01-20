@@ -1,0 +1,414 @@
+
+body { 
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color:  #292828;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+header {
+    background-color: #141414;
+    color: white;
+    padding: 0.5rem 1rem; /* Compact navbar */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+    height: 100px; /* Reduced height */
+    box-sizing: border-box; /* Ensures consistent padding and margin behavior */
+}
+
+.logo-container {
+    margin-right: 0; /* Remove extra right margin */
+    display: flex; /* Centers content if needed */
+    justify-content: center; /* Adjust alignment */
+    align-items: center;
+}
+.logo-video {
+    width: 80px; /* Adjust size for better fit */
+    height: auto; /* Maintain aspect ratio */
+}
+
+nav {
+    display: block;
+    /* margin-left: 30px; */
+}
+
+nav ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto; /* Adjust height for stacking */
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .logo-container {
+        margin-top: 1rem; /* Add spacing for stacked layout */
+    }
+
+    .logo-video {
+        width: 60px; /* Smaller size for mobile */
+    }
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem; /* Adjusted font size */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+header h1:hover {
+    color: #ffdd57;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin-left: 30px; /* Reduced margin */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 0.8rem; /* Adjusted font size */
+}
+
+header nav ul li a:hover {
+    color: #e94e77;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    header nav ul li a {
+        width: 100%;
+        padding: 0.5rem 0;
+        text-align: left;
+    }
+}
+
+#hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#hero .vidtext {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 50px; /* Adjusted margin */
+    height: 100%;
+}
+
+#hero .vidtext h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 2px;
+    color: #f4f4f4;
+}
+
+#hero .vidtext h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffdd57;
+}
+
+#hero .vidtext p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #e94e77;
+    color: white;
+    font-size: 0.8rem;
+    text-decoration: none;
+    border-radius: 80px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d93f63;
+}
+
+#portfolio, #about, #contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+#portfolio h2, #about h2, #contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project {
+    text-align: center;
+    margin: 20px;
+    width: 300px;  
+    overflow: hidden;
+    background-color: #000414;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.project a{
+  text-decoration: none;
+}
+.project img {
+    width: 100%;
+}
+
+.project h3 {
+ background-color: #e94e77;
+    color: white;
+    padding: 10px;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+/* General styles for the services section */
+#services, #Team {
+    padding: 25px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#services h2, #Team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.service a, .Team a {
+    text-decoration: none;
+}
+
+/* Service container styles */
+.service-container, .Team-container {
+    display: flex;
+    justify-content: space-between; /* Add space between boxes */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 10px; /* Add spacing between boxes */
+    max-width: 1200px; /* Set maximum width for alignment */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Individual service box styles */
+.service {
+    text-align: center;
+    margin: 10px;
+    width: 23%; /* Reduce width for all boxes to fit */
+    background-color: rgb(192, 192, 192);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+}
+.Team {
+    text-align: center;
+    margin: 10px;
+    width: 23%; /* Reduce width for all boxes to fit */
+    background-color: rgb(233, 233, 233);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+}
+/* #e94e77 */
+
+/* Service title styles */
+.service h3 {
+    background-color: #2c2b2b;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.Team h3 {
+    background-color: #d6d6d6;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Service hover effect */
+.service:hover, .Team:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Service description styles */
+.service p, .Team p {
+    color: #2b2b2b;
+    margin-top: 10px;
+}
+#about {
+    display: inline;
+}
+
+#contact {
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contact p {
+    font-size: 1rem;
+    color: #555;
+}
+
+#contact .contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+    margin: 20px 0;
+}
+
+#contact .contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+#contact .contact-item a {
+    color: #0f0f0f;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+#contact .contact-item a:hover {
+    color: #d93b63;
+}
+
+#contact .contact-icon {
+    width: 50px; /* Adjust the size of the icons */
+    height: 50px;
+}
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+.zoom-in {
+    transition: transform 0.3s;
+}
+
+.zoom-in:hover {
+    transform: scale(1.05);
+}
